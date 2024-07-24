@@ -1,12 +1,13 @@
 import React from 'react';
-import {SafeAreaView, Text, View} from 'react-native';
+import {SafeAreaView} from 'react-native';
+import {Container, TextComponent} from './components';
 
 const App = () => {
   return (
     <SafeAreaView>
-      <View className="mx-16">
-        <Text className="text-lg">Hello World</Text>
-      </View>
+      <Container>
+        <TextComponent />
+      </Container>
     </SafeAreaView>
   );
 };
