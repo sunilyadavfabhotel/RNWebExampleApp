@@ -4,7 +4,7 @@ import {ListComponent} from './List';
 import {InputComponent} from './InputField';
 import {DropdownComponent} from './DropdownComponent';
 import {AutoSuggestComponent} from './AutoSuggestComponent';
-import {Sidebar} from './Sidebar';
+import {Sidebar} from './Sidebar.web';
 import {TableView} from './TableView';
 
 export {

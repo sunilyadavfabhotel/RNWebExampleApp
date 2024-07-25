@@ -24,18 +24,15 @@ const Sidebar = () => {
 
   return (
     <View className="flex-1">
-      <TouchableOpacity className="p-4 bg-blue-500" onPress={toggleSidebar}>
+      <TouchableOpacity
+        className="p-4 bg-blue-500 w-40"
+        onPress={toggleSidebar}>
         <Text className="text-white">Toggle Sidebar</Text>
       </TouchableOpacity>
       {sidebarVisible && (
         <Animated.View
           style={{width: sidebarWidth}}
           className="absolute left-0 top-0 bottom-0 bg-white z-10 p-4">
-          <TouchableOpacity
-            className="p-4 bg-red-500 mb-4"
-            onPress={toggleSidebar}>
-            <Text className="text-white">Close Sidebar</Text>
-          </TouchableOpacity>
           <View className="p-4">
             <Text className="text-lg mb-2">Sidebar Item 1</Text>
             <Text className="text-lg mb-2">Sidebar Item 2</Text>

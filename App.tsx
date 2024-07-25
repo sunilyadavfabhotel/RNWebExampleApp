@@ -1,5 +1,11 @@
 import React from 'react';
-import {SafeAreaView, ScrollView, StatusBar, View} from 'react-native';
+import {
+  Platform,
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+  View,
+} from 'react-native';
 import {
   AlertModal,
   AutoSuggestComponent,
@@ -17,9 +23,11 @@ const App = () => {
     <SafeAreaView>
       {/* <Container title=""> */}
       <ScrollView>
-        <View style={{flex: 1}}>
-          <Sidebar />
-        </View>
+        {Platform.OS === 'web' && (
+          <View style={{flex: 1}}>
+            <Sidebar />
+          </View>
+        )}
         {/* </Container> */}
         <StatusBar barStyle="dark-content" />
 
