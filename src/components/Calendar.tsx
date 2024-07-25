@@ -3,7 +3,7 @@ import {Pressable, Text, View} from 'react-native';
 import {Calendar as RNCalendar} from 'react-native-calendars';
 
 const Calendar = () => {
-  const [date, setDate] = useState(undefined);
+  const [date, setDate] = useState<string | undefined>(undefined);
   const [showModal, setShowModal] = useState(false);
 
   const handleDatePress = (_date: string) => {
@@ -21,7 +21,7 @@ const Calendar = () => {
       {showModal && (
         <RNCalendar
           initialDate={date}
-          markedDates={{[date]: {selected: true}}}
+          markedDates={{[date as string]: {selected: true}}}
           onDayPress={day => {
             handleDatePress(day.dateString);
           }}
