@@ -13,6 +13,7 @@ import {
   DropdownComponent,
   InputComponent,
   ListComponent,
+  ModalComponent,
   Sidebar,
   TableView,
 } from './src/components';
@@ -55,6 +56,10 @@ const App = () => {
         {/* Alert Modal */}
         <Container title="Alert Modal">
           <AlertModal />
+        </Container>
+
+        <Container title="Modal">
+          <ModalComponent />
         </Container>
 
         <Container title="Table View">

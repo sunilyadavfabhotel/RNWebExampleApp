@@ -6,6 +6,7 @@ import {DropdownComponent} from './DropdownComponent';
 import {AutoSuggestComponent} from './AutoSuggestComponent';
 import {Sidebar} from './Sidebar.web';
 import {TableView} from './TableView';
+import {ModalComponent} from './Modal';
 
 export {
   Container,
@@ -16,4 +17,5 @@ export {
   AutoSuggestComponent,
   Sidebar,
   TableView,
+  ModalComponent,
 };
