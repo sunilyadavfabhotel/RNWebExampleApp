@@ -21,14 +21,8 @@ import {Text} from 'react-native';
 const App = () => {
   return (
     <SafeAreaView>
-      {/* <Container title=""> */}
-      <ScrollView>
-        {Platform.OS === 'web' && (
-          <View style={{flex: 1}}>
-            <Sidebar />
-          </View>
-        )}
-        {/* </Container> */}
+      {Platform.OS === 'web' && <Sidebar />}
+      <ScrollView className="z-1">
         <StatusBar barStyle="dark-content" />
 
         {/* Text component */}
