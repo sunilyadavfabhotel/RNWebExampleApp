@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, StatusBar, Text, View} from 'react-native';
+import {SafeAreaView, StatusBar, View} from 'react-native';
 import Input from './src/Input';
 
 const App = () => {
@@ -7,7 +7,6 @@ const App = () => {
     <SafeAreaView>
       <StatusBar barStyle="dark-content" />
       <View style={{alignItems: 'center'}}>
-        <Text style={{fontSize: 24}}>React Native Web App Example</Text>
         <Input />
       </View>
     </SafeAreaView>

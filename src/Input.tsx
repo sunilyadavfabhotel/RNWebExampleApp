@@ -4,6 +4,7 @@ import {StyleSheet, Text, TextInput, View} from 'react-native';
 const Input = () => {
   return (
     <View style={styles.wrapper}>
+      <Text className="text-24 text-red-300">React Native Web App Example</Text>
       <Text>Name:</Text>
       <TextInput style={styles.textInput} />
     </View>
