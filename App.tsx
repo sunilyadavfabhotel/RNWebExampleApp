@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  Platform,
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  View,
-} from 'react-native';
+import {Platform, SafeAreaView, ScrollView, StatusBar} from 'react-native';
 import {
   AlertModal,
   AutoSuggestComponent,
