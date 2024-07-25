@@ -55,13 +55,7 @@ const AutoSuggestComponent = () => {
               <Text className="text-lg">{item}</Text>
             </TouchableOpacity>
           )}
-          style={{
-            borderColor: 'gray',
-            borderWidth: 1,
-            borderRadius: 5,
-            marginTop: 2,
-            backgroundColor: 'white',
-          }}
+          className="border border-gray-500 rounded-md mt-2 bg-white"
         />
       )}
     </View>
