@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, ScrollView, StatusBar} from 'react-native';
+import {SafeAreaView, ScrollView, StatusBar, View} from 'react-native';
 import {
   AlertModal,
   AutoSuggestComponent,
@@ -7,13 +7,20 @@ import {
   DropdownComponent,
   InputComponent,
   ListComponent,
+  Sidebar,
+  TableView,
 } from './src/components';
 import {Text} from 'react-native';
 
 const App = () => {
   return (
     <SafeAreaView>
+      {/* <Container title=""> */}
       <ScrollView>
+        <View style={{flex: 1}}>
+          <Sidebar />
+        </View>
+        {/* </Container> */}
         <StatusBar barStyle="dark-content" />
 
         {/* Text component */}
@@ -46,6 +53,10 @@ const App = () => {
         {/* Alert Modal */}
         <Container title="Alert Modal">
           <AlertModal />
+        </Container>
+
+        <Container title="Table View">
+          <TableView />
         </Container>
       </ScrollView>
     </SafeAreaView>

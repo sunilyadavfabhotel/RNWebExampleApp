@@ -31,7 +31,7 @@ const AlertModal = () => {
             <TouchableOpacity
               className="bg-red-500 p-3 rounded-md"
               onPress={hideModal}>
-              <Text className="text-white text-lg">Close</Text>
+              <Text className="text-white text-lg text-center">Close</Text>
             </TouchableOpacity>
           </View>
         </View>
