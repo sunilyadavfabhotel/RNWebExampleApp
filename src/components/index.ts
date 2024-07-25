@@ -1,4 +1,19 @@
-import {TextComponent} from './Text';
 import {Container} from './Container';
+import {AlertModal} from './AlertModal';
+import {ListComponent} from './List';
+import {InputComponent} from './InputField';
+import {DropdownComponent} from './DropdownComponent';
+import {AutoSuggestComponent} from './AutoSuggestComponent';
+import {Sidebar} from './Sidebar.web';
+import {TableView} from './TableView';
 
-export {TextComponent, Container};
+export {
+  Container,
+  AlertModal,
+  ListComponent,
+  InputComponent,
+  DropdownComponent,
+  AutoSuggestComponent,
+  Sidebar,
+  TableView,
+};
