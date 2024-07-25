@@ -7,6 +7,8 @@ import {AutoSuggestComponent} from './AutoSuggestComponent';
 import {Sidebar} from './Sidebar.web';
 import {TableView} from './TableView';
 import {ModalComponent} from './Modal';
+import {Calendar} from './Calendar';
+import {Calendar as CalendarWeb} from './Calendar.web';
 
 export {
   Container,
@@ -18,4 +20,6 @@ export {
   Sidebar,
   TableView,
   ModalComponent,
+  Calendar,
+  CalendarWeb,
 };

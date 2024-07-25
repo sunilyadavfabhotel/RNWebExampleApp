@@ -3,6 +3,8 @@ import {Platform, SafeAreaView, ScrollView, StatusBar} from 'react-native';
 import {
   AlertModal,
   AutoSuggestComponent,
+  Calendar,
+  CalendarWeb,
   Container,
   DropdownComponent,
   InputComponent,
@@ -20,6 +22,10 @@ const App = () => {
       <ScrollView className="z-1">
         <StatusBar barStyle="dark-content" />
 
+        {/* Calender Components */}
+        <Container title="Calender">
+          {Platform.OS === 'web' ? <CalendarWeb /> : <Calendar />}
+        </Container>
         {/* Text component */}
         <Container title="Text">
           <Text className="text-24 text-red-300">
