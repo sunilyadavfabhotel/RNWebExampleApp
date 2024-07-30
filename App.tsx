@@ -4,7 +4,6 @@ import {
   AlertModal,
   AutoSuggestComponent,
   Calendar,
-  CalendarWeb,
   Container,
   DropdownComponent,
   InputComponent,
@@ -24,7 +23,7 @@ const App = () => {
 
         {/* Calender Components */}
         <Container title="Calender">
-          {Platform.OS === 'web' ? <CalendarWeb /> : <Calendar />}
+          <Calendar />
         </Container>
         {/* Text component */}
         <Container title="Text">
