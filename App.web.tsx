@@ -23,7 +23,9 @@ const WebSideMenu = ({children}) => {
           Go to Details
         </Text>
       </View>
-      <View className="flex-1">{children}</View>
+      <View className="flex-1 border-2 p-4 bg-slate-300 h-screen">
+        {children}
+      </View>
     </View>
   );
 };
