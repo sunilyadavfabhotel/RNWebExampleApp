@@ -1,11 +1,13 @@
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {View, Text, Button} from 'react-native';
+import {View, Text, Pressable} from 'react-native';
 
-const Details = ({navigation}: {navigation: any}) => {
+const Details = () => {
+  const navigate = useNavigation();
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
       <Text>Details Screen</Text>
-      <Button title="Go Back" onPress={() => navigation.goBack()} />
+      <Pressable title="Go Back" onPress={() => navigate.goBack()} />
     </View>
   );
 };

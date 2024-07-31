@@ -1,5 +1,5 @@
 import React, {useState, useRef} from 'react';
-import {View, Text, TouchableOpacity, Animated} from 'react-native';
+import {View, Text, Pressable, Animated} from 'react-native';
 
 const Sidebar = () => {
   const [sidebarVisible, setSidebarVisible] = useState(false);
@@ -24,9 +24,9 @@ const Sidebar = () => {
 
   return (
     <View className="w-40">
-      <TouchableOpacity className="p-4 bg-blue-500 " onPress={toggleSidebar}>
+      <Pressable className="p-4 bg-blue-500 " onPress={toggleSidebar}>
         <Text className="text-white">Toggle Sidebar</Text>
-      </TouchableOpacity>
+      </Pressable>
       {sidebarVisible && (
         <Animated.View
           style={{width: sidebarWidth}}

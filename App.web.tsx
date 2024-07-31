@@ -1,19 +1,53 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createDrawerNavigator} from '@react-navigation/drawer';
+import {NavigationContainer, useNavigation} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 
-import {Sidebar} from './src/navigation/Sidebar';
 import {Home, Details} from './src/screens';
+import {Text, View} from 'react-native';
 
-const Drawer = createDrawerNavigator();
+const Stack = createStackNavigator();
+
+const WebSideMenu = ({children}) => {
+  const navigation = useNavigation();
+  return (
+    <View className="flex-row">
+      <View className="w-40">
+        <Text
+          className="text-blue-500 text-2xl"
+          onPress={() => navigation.navigate('Home')}>
+          Home
+        </Text>
+        <Text
+          className="text-blue-500 text-2xl"
+          onPress={() => navigation.navigate('Details')}>
+          Go to Details
+        </Text>
+      </View>
+      <View className="flex-1">{children}</View>
+    </View>
+  );
+};
+
+// Separate components for Home and Details with WebSideMenu wrapper
+const HomeScreen = () => (
+  <WebSideMenu>
+    <Home />
+  </WebSideMenu>
+);
+
+const DetailsScreen = () => (
+  <WebSideMenu>
+    <Details />
+  </WebSideMenu>
+);
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Drawer.Navigator drawerContent={props => <Sidebar {...props} />}>
-        <Drawer.Screen name="Home" component={Home} />
-        <Drawer.Screen name="Details" component={Details} />
-      </Drawer.Navigator>
+      <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Details" component={DetailsScreen} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 };
