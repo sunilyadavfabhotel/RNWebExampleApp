@@ -7,19 +7,19 @@ import {Text, View} from 'react-native';
 
 const Stack = createStackNavigator();
 
-const WebSideMenu = ({children}) => {
+const WebSideMenu = ({children}: {children: React.ReactNode}) => {
   const navigation = useNavigation();
   return (
     <View className="flex-row">
       <View className="w-40">
         <Text
           className="text-blue-500 text-2xl"
-          onPress={() => navigation.navigate('Home')}>
+          onPress={() => navigation.navigate('Home' as never)}>
           Home
         </Text>
         <Text
           className="text-blue-500 text-2xl"
-          onPress={() => navigation.navigate('Details')}>
+          onPress={() => navigation.navigate('Details' as never)}>
           Go to Details
         </Text>
       </View>
