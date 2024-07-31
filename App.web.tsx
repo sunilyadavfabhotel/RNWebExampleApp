@@ -1,19 +1,20 @@
 import React from 'react';
-import {SafeAreaView, ScrollView, View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createDrawerNavigator} from '@react-navigation/drawer';
 
-import {Home} from './src/screens';
-import {Sidebar} from './src/components';
+import {Sidebar} from './src/navigation/Sidebar';
+import {Home, Details} from './src/screens';
+
+const Drawer = createDrawerNavigator();
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <View className="flex-row">
-        <Sidebar />
-        <ScrollView className="z-1">
-          <Home />
-        </ScrollView>
-      </View>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Drawer.Navigator drawerContent={props => <Sidebar {...props} />}>
+        <Drawer.Screen name="Home" component={Home} />
+        <Drawer.Screen name="Details" component={Details} />
+      </Drawer.Navigator>
+    </NavigationContainer>
   );
 };
 
