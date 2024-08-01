@@ -1,5 +1,9 @@
 import React from 'react';
-import {NavigationContainer, useNavigation} from '@react-navigation/native';
+import {
+  NavigationContainer,
+  useNavigation,
+  useRoute,
+} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import {Home, Details} from './src/screens';
@@ -9,16 +13,22 @@ const Stack = createStackNavigator();
 
 const WebSideMenu = ({children}: {children: React.ReactNode}) => {
   const navigation = useNavigation();
+  const route = useRoute();
+
   return (
     <View className="flex-row">
-      <View className="w-40">
+      <View className="w-40 bg-slate-800 p-2">
         <Text
-          className="text-blue-500 text-2xl"
+          className={`text-blue-500 text-2xl ${
+            route.name === 'Home' ? 'text-lime-200' : 'text-gray-50'
+          }`}
           onPress={() => navigation.navigate('Home' as never)}>
           Home
         </Text>
         <Text
-          className="text-blue-500 text-2xl"
+          className={`text-blue-500 text-2xl ${
+            route.name === 'Details' ? 'text-lime-200' : 'text-gray-50'
+          }`}
           onPress={() => navigation.navigate('Details' as never)}>
           Go to Details
         </Text>
