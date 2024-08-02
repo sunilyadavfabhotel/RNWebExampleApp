@@ -8,7 +8,11 @@ const Details = () => {
     <View className="flex-1 justify-center items-center">
       <Text className="text-lg mb-4">Details Screen</Text>
       <Pressable
-        className="bg-blue-500 p-3 rounded-md"
+        className={`
+          rounded-md p-3
+          ios:bg-blue-200
+          android:bg-blue-900 ripple
+          web:bg-blue-500 hover:bg-violet-600`}
         onPress={() => navigate.goBack()}>
         <Text className="text-white text-lg">Go Back</Text>
       </Pressable>
