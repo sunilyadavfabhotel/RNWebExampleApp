@@ -12,7 +12,7 @@ const babelLoaderConfiguration = {
   test: /\.(js|jsx|ts|tsx)$/,
   include: [
     path.resolve(__dirname, 'index.web.js'),
-    path.resolve(__dirname, 'App.tsx'),
+    path.resolve(__dirname, 'App.web.tsx'),
     path.resolve(__dirname, 'src'),
     path.resolve(__dirname, 'component'),
     ...compileNodeModules,

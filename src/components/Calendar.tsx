@@ -22,7 +22,7 @@ const Calendar = () => {
         <RNCalendar
           initialDate={date}
           markedDates={{[date as string]: {selected: true}}}
-          onDayPress={day => {
+          onDayPress={(day: any) => {
             handleDatePress(day.dateString);
           }}
         />
