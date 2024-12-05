@@ -1,5 +1,11 @@
 {
   "extends": "@react-native/typescript-config/tsconfig.json",
-  "include": ["src/**/*", "App.tsx", "global.d.ts", "index.web.js"],
+  "include": [
+    "src/**/*",
+    "App.native.tsx",
+    "App.web.tsx",
+    "global.d.ts",
+    "index.web.js"
+  ],
   "exclude": ["node_modules"]
 }

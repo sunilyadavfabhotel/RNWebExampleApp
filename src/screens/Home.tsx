@@ -1,5 +1,6 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {ScrollView, Text} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 import {
   AlertModal,
   AutoSuggestComponent,
@@ -13,9 +14,11 @@ import {
 } from '../components';
 
 const Home = () => {
+  const navigate = useNavigation();
   return (
-    <View>
+    <ScrollView>
       {/* Calender Components */}
+
       <Container title="Calender">
         <Calendar />
       </Container>
@@ -58,7 +61,14 @@ const Home = () => {
       <Container title="Table View">
         <TableView />
       </Container>
-    </View>
+      <Container title="Details">
+        <Text
+          style={{color: 'blue', fontSize: 20}}
+          onPress={() => navigate.navigate('Details')}>
+          Go to Details
+        </Text>
+      </Container>
+    </ScrollView>
   );
 };
 

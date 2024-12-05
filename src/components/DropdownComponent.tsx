@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, TouchableOpacity, FlatList} from 'react-native';
+import {View, Text, FlatList, Pressable} from 'react-native';
 
 const DropdownComponent = () => {
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
@@ -18,24 +18,22 @@ const DropdownComponent = () => {
 
   return (
     <View className="p-4 w-full">
-      <TouchableOpacity
+      <Pressable
         className="border border-gray-300 p-2 rounded-md bg-white"
         onPress={toggleDropdown}>
         <Text className="text-lg">
           {selectedItem ? selectedItem : 'Select an option'}
         </Text>
-      </TouchableOpacity>
+      </Pressable>
       {isDropdownOpen && (
         <View className="border border-gray-300 mt-2 rounded-md bg-white">
           <FlatList
             data={items}
             keyExtractor={item => item}
             renderItem={({item}) => (
-              <TouchableOpacity
-                className="p-2"
-                onPress={() => handleItemPress(item)}>
+              <Pressable className="p-2" onPress={() => handleItemPress(item)}>
                 <Text className="text-lg">{item}</Text>
-              </TouchableOpacity>
+              </Pressable>
             )}
           />
         </View>

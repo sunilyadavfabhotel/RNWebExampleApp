@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, TextInput, Text, TouchableOpacity, FlatList} from 'react-native';
+import {View, TextInput, Text, Pressable, FlatList} from 'react-native';
 
 const AutoSuggestComponent = () => {
   const [query, setQuery] = useState('');
@@ -49,11 +49,11 @@ const AutoSuggestComponent = () => {
           data={suggestions}
           keyExtractor={item => item}
           renderItem={({item}) => (
-            <TouchableOpacity
+            <Pressable
               className="p-2"
               onPress={() => handleSuggestionPress(item)}>
               <Text className="text-lg">{item}</Text>
-            </TouchableOpacity>
+            </Pressable>
           )}
           className="border border-gray-500 rounded-md mt-2 bg-white"
         />
